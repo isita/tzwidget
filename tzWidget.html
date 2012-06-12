@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="yui3-js-enabled"><!-- Standard Form Layout--><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js"></script>
+<script type="text/javascript" src="GeoLocTimeZones.js"></script>
+<title>Time Zone widget</title>
+
+</head>
+<body>
+
+
+    <div class="tzwidget">
+    <div id="worldmap">
+    </div>
+    <div id="location"><img src='css/location_pin.png' />
+    </div>
+    <div Id="selector">
+    <label>Time Zones selector:</label>
+
+
+    </div>
+    </div>
+    <script> 
+        YUI().use('GeoLocTimeZones', function (Y) {
+            
+            Y.GeoLoc.init({pinOffsetX: 4, //12/3
+                            pinOffsetY: 14,//17.5 sets the marker v-align: baseline; h-align: center (respects to marker's size)
+                            pinID: 'location',//marker ID
+                            TZpointsID: 'Time_zones_points', // tag
+                            TZmapID: 'Time_zones',
+                            mapBoundaryID:'mapamundi_border',
+                            selectID: 'selector-widget-tz',
+                            divSelectContainerID: 'selector',//also class name of the select container (div)
+                            dynamicSelect: true,
+                            svgImageID: 'worldmap',
+                            svgURL: 'worldmap.svg'});
+        });
+    </script>
+
+</body></html>
