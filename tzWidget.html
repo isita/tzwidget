@@ -1,42 +1,39 @@
 <!DOCTYPE html>
-<html class="yui3-js-enabled"><!-- Standard Form Layout--><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<script src="http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js"></script>
-<script type="text/javascript" src="GeoLocTimeZones.js"></script>
-<title>Time Zone widget</title>
-
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js"></script>
+    <script type="text/javascript" src="GeoLocTimeZones.js"></script>
+    <title>Time Zone widget</title>
 </head>
 <body>
-
-
     <div class="tzwidget">
-    <div id="worldmap">
-    </div>
-    <div id="location"><img src='css/location_pin.png' />
-    </div>
-    <div Id="selector">
-    <label>Time Zones selector:</label>
-
-
-    </div>
+        <div id="worldmap"></div>
+        <div id="location"><img src='css/location_pin.png' /></div>
+            <div id="selector">
+                <label>Time Zones selector:</label>
+                <!-- if dynamicSelect=false create your options
+                    <select id = "selector-widget-tz"> 
+                        <option value="Africa/Abidjan">Africa/Abidjan</option>
+                        <option value="Africa/Abidjan">Africa/Abidjan</option>
+                            ...
+                        <option value="Europe/Madrid">Europe/Madrid</option>
+                    </select>  -->
+            </div>
     </div>
     <script> 
         YUI().use('GeoLocTimeZones', function (Y) {
             
-            Y.GeoLoc.init({pinOffsetX: 4, //12/3
-                            pinOffsetY: 14,//17.5 sets the marker v-align: baseline; h-align: center (respects to marker's size)
-                            pinID: 'location',//marker ID
-                            TZpointsID: 'Time_zones_points', // tag
-                            TZmapID: 'Time_zones',
-                            mapBoundaryID:'mapamundi_border',
-                            selectID: 'selector-widget-tz',
-                            divSelectContainerID: 'selector',//also class name of the select container (div)
-                            dynamicSelect: true,
-                            svgImageID: 'worldmap',
-                            svgURL: 'worldmap.svg'});
+            Y.GeoLoc.init({pinOffsetX: 4, // Sets the marker horizontal align. center
+                            pinOffsetY: 14,// Sets the marker vertical align. baseline (respects to marker's size)
+                            pinID: 'location',// Pin marker ID
+                            selectID: 'selector-widget-tz', // Select tag to choose the time zone
+                            divSelectContainerID: 'selector', // Select container Id (div)
+                            dynamicSelect: true, // Fill the select option dynamically with the timezones store in svg. If 'false' you create the select
+                            svgImageID: 'worldmap', // Svg Id
+                            svgURL: 'worldmap.svg'}); // url to the svg image
         });
     </script>
 
-</body></html>
+</body>
+</html>
