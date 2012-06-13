@@ -52,7 +52,8 @@ YUI.add('GeoLocTimeZones', function (Y) {
             selector = document.getElementById(config.selectID);
             selector.value = selectPoint.getAttribute('data-tz');
             selectTimeZone(selectPoint.getAttribute('data-tz'));
-    
+        }
+       
         function attachedToMap() {
             if (config.dynamicSelect) {
                 var selectNode = Y.one('#' + config.divSelectContainerID);
