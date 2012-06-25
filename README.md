@@ -1,7 +1,11 @@
 tzwidget
 ========
 
+<<<<<<< HEAD
 GeoLocTimeZones module allows you to select a time zone directly by clicking the map or by selecting from a dropdown menu.
+=======
+GeoLocTimeZones module allows you to select a time zone directly on clicking the map or by selecting from a dropdown menu.
+>>>>>>> 86b42ba81c814b125d707db521fc6ca3227a84fb
 
 
 Includes:
