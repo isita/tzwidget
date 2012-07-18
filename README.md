@@ -19,7 +19,6 @@ Includes:
 - divSelectContainerID: 'selector'. Select container Id (div).  
 - dynamicSelect: true/false. Fill the select option dynamically with the timezones stored in the svg. If 'false' you create the select.
 - svgImageID: 'worldmap'. Svg Id. 
-- svgURL: 'worldmap.svg'. url to the svg image.
 
 Thanks:
 -------
