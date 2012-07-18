@@ -5,9 +5,9 @@
 #Time_zones_points path {fill:transparent;}/*display:none; don't use set (x,y) to zero*/
 #Time_zones path.selected {fill:#E6E6E6;}
 /*#Time_zones_points path.visiblecity {fill: red;}*/
-#location {position:absolute; height:17.5px; width:12x; display:none;}
+#location {position:absolute; height:17.5px; width:12px; display:none;}
 #location img{height:17.5px; width:12px;}
-#selector {margin:auto; text-align:center;font-family:"MS Shell Dlg"; font-weight:Bold; font-size=12px;}
+#selector {margin:auto; text-align:center;font-family:"MS Shell Dlg"; font-weight:Bold; font-size:12px;}
 
 
 
