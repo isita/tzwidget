@@ -79,6 +79,8 @@ YUI.add('GeoLocTimeZones', function (Y) {
                 selectTimeZone(document.getElementById(config.selectID).value);
             }
             Y.one('#' + config.selectID).delegate('change', onChange, 'select');
+            // show initial timezone if preselected
+            selectTimeZone(document.getElementById(config.selectID).value);
         }
         //Y.one('#' + config.svgImageID).load(config.svgURL, undefined, attachedToMap); if you use the svg in the same domain you can use this option, 
         //remove the setHTML and image variable, and use the worldmap.svg in stead.
