@@ -61,8 +61,6 @@ YUI.add('GeoLocTimeZones', function (Y) {
                     // fills the select tag with the tz of the svg
                     createdNode.append(Y.Node.create('<option id= tz-"' + index + '" value="' + node.getAttribute('data-tz') + '">' + node.getAttribute('data-tz') + '</option>'));
                 });
-            } else {
-                console.log('no');
             }
             function onClick(e) {
                 // cliqueado (event, filter on the points with the timezone clicked on the map)
